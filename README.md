@@ -1,0 +1,18 @@
+## TermuxAutoConfig
+一个用于自动配置Termux的shell脚本
+(每次下载文件会让占用无止境变大，然后每次清楚缓存有需要重新配置)  
+在项目的Shells文件夹中有所有的shell自动文件，通过以下方式运行  
+(termux-setup-storage只需要执行一次)
+```Bash
+termux-setup-storage  
+chmod +x 123.sh  
+./123.sh  
+```
+## 说明
+项目Code中的howxu.zsh-theme仅为为Termux安装zsh
+主题时使用的主题文件，没有任何实际意义  
+**Shell内置的zsh主题为个人制作，仅符合个人需求**  
+**Shell内安装的工具包也为个人需求**  
+## 文件说明
+TermuxConfig是个人需求配置Termux的Shell  
+KaliNethunter是自动在termux中配置KaliNethunterRootless的Shell
