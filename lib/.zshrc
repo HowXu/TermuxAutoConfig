@@ -106,4 +106,3 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias chcolor='/data/data/com.termux/files/home/.termux/colors.sh'
 alias chfont='/data/data/com.termux/files/home/.termux/fonts.sh'
-source /data/data/com.termux/files/home/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
