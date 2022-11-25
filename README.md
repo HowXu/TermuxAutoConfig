@@ -1,7 +1,7 @@
 ## TermuxAutoConfig
 一个用于自动配置Termux的shell脚本
 (每次下载文件会让占用无止境变大，然后每次清楚缓存有需要重新配置)  
-在项目的Shells文件夹中有所有的shell自动文件，通过以下方式运行  
+在项目的Shells文件夹中有所有的shell自动文件，下载其中一个在~目录下运行即可  
 (termux-setup-storage只需要执行一次)
 ```Bash
 termux-setup-storage  

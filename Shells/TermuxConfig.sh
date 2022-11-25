@@ -18,12 +18,12 @@ echo -e "  "
 echo -e "\033[34m 即将安装常用工具.. \033[0m"
 sleep 5
 echo -e "  "
-echo -e "\033[34m 安装Figlet(大字母转换) \033[0m"
+echo -e "\033[34m 安装Figlet(好玩的字母转换) \033[0m"
 sleep 4
 pkg install figlet -y
 sleep 5
 echo -e "  "
-echo -e "\033[34m 安装cmatrix(代码雨) \033[0m"
+echo -e "\033[34m 安装cmatrix(下雨) \033[0m"
 sleep 4
 pkg install cmatrix -y
 sleep 5
@@ -57,17 +57,28 @@ sleep 4
 pkg install proot -y
 sleep 5
 echo -e "  "
-echo -e "\033[34m 安装zsh \033[0m"
-sleep 3
-echo -e "\033[34m 请在接下来的选项中两次分别选择14与4 \033[0m"
+echo -e "\033[34m 安装oh-my-zsh \033[0m"
 sleep 4
-sh -c "$(curl -fsSL https://html.sqlsec.com/termux-install.sh)" -y
-/data/data/com.termux/files/home/termux-ohmyzsh/install.sh
+echo 0|sh -c "$(curl -fsSL https://html.sqlsec.com/termux-install.sh)" -y
+echo 0|/data/data/com.termux/files/home/termux-ohmyzsh/install.sh
+echo -e "  "
+echo -e "\033[34m 进行zsh配置 \033[0m"
+sleep 4
+echo 14 |/data/data/com.termux/files/home/.termux/colors
+echo 14 |/data/data/com.termux/files/home/.termux/colors.sh
+echo 11 |/data/data/com.termux/files/home/.termux/fonts.sh
 git clone https://github.com/HowXu/TermuxAutoConfig
 cp /data/data/com.termux/files/home/TermuxAutoConfig/lib/howxu.zsh-theme /data/data/com.termux/files/home/.oh-my-zsh/themes
 cp /data/data/com.termux/files/home/TermuxAutoConfig/lib/.zshrc /data/data/com.termux/files/home
 cp /data/data/com.termux/files/home/TermuxAutoConfig/lib/motd /data/data/com.termux/files/usr/etc/
+rm -rf /data/data/com.termux/files/home/termux-ohmyzsh
 rm -rf /data/data/com.termux/files/home/TermuxAutoConfig
+echo -e "  "
+echo -e "\033[34m 安装zsh常用插件 \033[0m"
+sleep 4
+git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions
+git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 echo -e "\033[34m 安装已经完成，将在3秒后重启 \033[0m"
 sleep 3
 exit
