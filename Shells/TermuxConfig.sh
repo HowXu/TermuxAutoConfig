@@ -31,6 +31,8 @@ echo -e "  "
 echo -e "\033[34m 安装Git \033[0m"
 sleep 4
 pkg install git -y
+git config --global user.email "howxu366@outlook.com"
+git config --global user.name "HowXu"
 sleep 5
 echo -e "  "
 echo -e "\033[34m 安装wget \033[0m"
@@ -38,9 +40,11 @@ sleep 4
 pkg install wget -y
 sleep 5
 echo -e "  "
-echo -e "\033[34m 安装openssh \033[0m"
+echo -e "\033[34m 安装openssh，并生成ssh密钥 \033[0m"
 sleep 4
+echo -e "\033[34m 可在~目录下的.ssh文件夹中找到密钥 \033[0m"
 pkg install openssh -y
+ssh-keygen -t rsa
 sleep 5
 echo -e "  "
 echo -e "\033[34m 安装vim \033[0m"
