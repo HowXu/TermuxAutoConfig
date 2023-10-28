@@ -6,5 +6,6 @@ cp ./TermuxAutoConfig/lib/install-nethunter-termux ./install-nethunter-termux
 chmod +x install-nethunter-termux
 ./install-nethunter-termux -y
 rm kalifs-arm64-full.tar.xz
+rm -rf TermuxAutoConfig
 rm install-nethunter-termux
 rm kalifs-arm64-full.tar.xz.shasum
