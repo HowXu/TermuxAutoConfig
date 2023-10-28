@@ -18,5 +18,4 @@ chmod +x 123.sh
 
 ## 文件说明
 TermuxConfig是个人需求配置Termux的Shell  
-KaliNethunter是自动在termux中配置KaliNethunterRootless的Shell  
-发布里的Termux是使用该文件配置完之后重构版本，开箱即用
+KaliNethunter是自动在termux中配置KaliNethunterRootless的Shell
