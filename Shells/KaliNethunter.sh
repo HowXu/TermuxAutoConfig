@@ -1,7 +1,8 @@
 echo "[开始安装KaliNetHunter]"
 sleep 3
 pkg install wget -y
-wget -O install-nethunter-termux https://offs.ec/2MceZWr
+git clone https://github.com/HowXu/TermuxAutoConfig
+cp ./TermuxAutoConfig/lib/install-nethunter-termux ./install-nethunter-termux
 chmod +x install-nethunter-termux
 ./install-nethunter-termux -y
 rm kalifs-arm64-full.tar.xz
