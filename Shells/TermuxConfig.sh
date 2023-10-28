@@ -100,3 +100,6 @@ sleep 3
 chsh -s zsh
 exit
 exit
+exit
+exit
+exit
