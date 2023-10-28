@@ -9,7 +9,7 @@ echo " 即将进行仓库和软件包更新 "
 echo " 遇到的所有选项都可以选y "
 sleep 3
 apt update -y
-apy upgrade -y
+apt upgrade -y
 echo "  "
 echo " 更新完成 "
 echo "  "
@@ -27,7 +27,7 @@ echo " 安装wget "
 sleep 2
 apt install wget -y
 echo "  "
-echo " 安装openssh,请自行生成ssh密钥:ssh-keygen -t rsa"
+echo " 安装openssh,自行生成ssh密钥"
 sleep 2
 apt install openssh -y
 echo "  "
@@ -41,6 +41,7 @@ apt install android-tools -y
 echo "  "
 echo " 安装proot "
 sleep 2
+apt install proot -y
 echo "  "
 echo " 安装zip "
 sleep 2
@@ -70,9 +71,10 @@ chsh -s zsh
 echo "  "
 echo " 进行zsh配置 "
 sleep 2
-echo 14 | sh /data/data/com.termux/files/home/.termux/colors.sh
-echo 6 | sh /data/data/com.termux/files/home/.termux/fonts.sh
-
+echo 14 |/data/data/com.termux/files/home/.termux/colors.sh
+#sleep 3
+#echo 11 |/data/data/com.termux/files/home/.termux/fonts.sh
+#未知原因更换字体使用自动化会闪退所以没有自动化换字体
 git clone https://ghproxy.com/github.com/HowXu/TermuxAutoConfig
 cp /data/data/com.termux/files/home/TermuxAutoConfig/lib/howxu.zsh-theme /data/data/com.termux/files/home/.oh-my-zsh/themes
 cp /data/data/com.termux/files/home/TermuxAutoConfig/lib/.zshrc /data/data/com.termux/files/home
