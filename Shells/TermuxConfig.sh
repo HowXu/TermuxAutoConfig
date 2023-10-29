@@ -1,15 +1,15 @@
-echo  " [Start configing Termux...] "
+echo  " Start configing Termux... "
 rm -rf ~/storage
 echo  "  "
-echo  " 更换中科大源... "
+echo  " 更换清华源... "
 cat /dev/null > $PREFIX/etc/apt/sources.list
-echo "deb https://mirrors.ustc.edu.cn/termux/apt/termux-main stable main" > $PREFIX/etc/apt/sources.list
+echo "deb https://mirrors.tuna.tsinghua.edu.cn/termux/apt/termux-main stable main" > $PREFIX/etc/apt/sources.list
 echo "  "
 echo " 即将进行仓库和软件包更新 "
 echo " 遇到的所有选项都可以选y "
 sleep 3
 apt update -y
-apt upgrade -y
+apt upgrade --fix-missing -y
 echo "  "
 echo " 更新完成 "
 echo "  "
@@ -24,6 +24,9 @@ sleep 2
 apt install git -y
 echo "  "
 echo " 安装wget "
+sleep 2
+echo "  "
+echo " 安装zip "
 sleep 2
 apt install wget -y
 echo "  "
