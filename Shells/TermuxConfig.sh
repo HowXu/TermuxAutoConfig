@@ -6,7 +6,7 @@ cat /dev/null > $PREFIX/etc/apt/sources.list
 echo "deb https://mirrors.tuna.tsinghua.edu.cn/termux/apt/termux-main stable main" > $PREFIX/etc/apt/sources.list
 echo "  "
 echo " 即将进行仓库和软件包更新 "
-echo " 遇到的所有选项都可以选y "
+echo " 遇到的所有选项请直接回车跳过 "
 sleep 3
 apt update -y
 apt upgrade --fix-missing -y
