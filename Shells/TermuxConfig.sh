@@ -74,10 +74,15 @@ chsh -s zsh
 echo "  "
 echo " 进行zsh配置 "
 sleep 2
-echo 14 |/data/data/com.termux/files/home/.termux/colors.sh
-#sleep 3
-#echo 11 |/data/data/com.termux/files/home/.termux/fonts.sh
-#未知原因更换字体使用自动化会闪退所以没有自动化换字体
+wget https://github.moeyy.xyz/https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/FiraCode.zip
+
+unzip FiraCode.zip "FiraCodeNerdFont-Regular.ttf" -d ~/.termux/fonts/FiraCodeNerdFont/
+#修改字体和配色
+cp ~/.termux/fonts/FiraCodeNerdFont/FiraCodeNerdFont-Regular.ttf ~/.termux/font.ttf
+cp ~/.termux/colors/hemisu.dark.colors ~/.termux/colors.properties
+#清理
+rm FiraCode.zip
+
 git clone https://ghproxy.com/github.com/HowXu/TermuxAutoConfig
 cp /data/data/com.termux/files/home/TermuxAutoConfig/lib/howxu.zsh-theme /data/data/com.termux/files/home/.oh-my-zsh/themes
 cp /data/data/com.termux/files/home/TermuxAutoConfig/lib/.zshrc /data/data/com.termux/files/home
