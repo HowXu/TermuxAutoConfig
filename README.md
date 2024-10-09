@@ -12,7 +12,6 @@ sh -c "$(wget https://fastly.jsdelivr.net/gh/HowXu/TermuxAutoConfig/Shells/Termu
 
 ## 说明
 **如果不能正常配置，请更换网络或使用速度快的VPN节点并清除Termux缓存重新配置**  
-**由于未知的原因，在oh-my-zsh的字体选择是只能手动选择**  
 **Shell内置的zsh主题为个人制作**  
 
 ## 文件说明
